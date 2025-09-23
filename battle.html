@@ -93,56 +93,27 @@
         <!-- CONTENIDO CENTRAL -->
         <main data-outlet class="main-content">
 
-            <!-- HERO SECTION -->
-            <section data-component="Hero" class="hero">
-                <div class="hero__content">
-                    <h1 class="hero__title">⚔️ La Arena Definitiva de Memes</h1>
-                    <p class="hero__subtitle">Sube tus memes y deja que la comunidad decida quién es el campeón</p>
-                    <div class="hero__stats">
-                        <div class="hero__stat">
-                            <span class="hero__stat-number">1,234</span>
-                            <span class="hero__stat-label">Memes Subidos</span>
-                        </div>
-                        <div class="hero__stat">
-                            <span class="hero__stat-number">856</span>
-                            <span class="hero__stat-label">Batallas Activas</span>
-                        </div>
-                        <div class="hero__stat">
-                            <span class="hero__stat-number">2,341</span>
-                            <span class="hero__stat-label">Usuarios Activos</span>
-                        </div>
+            <!-- ENCABEZADO DE SECCIÓN -->
+            <section data-component="BattlesHeader" class="hero">
+                <h1 class="hero__title">⚔️ Batallas Activas</h1>
+                <p class="hero__subtitle">Vota por tu meme favorito y decide quién será el campeón</p>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">12</span>
+                        <span class="hero__stat-label">Batallas Activas</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">1,847</span>
+                        <span class="hero__stat-label">Votos Totales</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">24h</span>
+                        <span class="hero__stat-label">Tiempo Promedio</span>
                     </div>
                 </div>
             </section>
 
-            <!-- BARRA DE BÚSQUEDA -->
-            <section data-component="SearchBar" class="search-section">
-                <div class="search-bar">
-                    <div class="search-bar__input-group">
-                        <i data-lucide="search" class="search-bar__icon"></i>
-                        <input type="text" class="search-bar__input"
-                            placeholder="Buscar memes por título, categoría, usuario...">
-                        <button class="search-bar__btn">Buscar</button>
-                    </div>
-                    <div class="search-bar__filters">
-                        <select class="search-bar__filter">
-                            <option>Todas las categorías</option>
-                            <option>😂 Humor</option>
-                            <option>🎓 Universidad</option>
-                            <option>💻 Programación</option>
-                            <option>⚽ Deportes</option>
-                        </select>
-                        <select class="search-bar__filter">
-                            <option>Todos los tiempos</option>
-                            <option>Hoy</option>
-                            <option>Esta semana</option>
-                            <option>Este mes</option>
-                        </select>
-                    </div>
-                </div>
-            </section>
-
-            <!-- BATALLA ACTIVA DESTACADA -->
+                        <!-- BATALLA ACTIVA DESTACADA -->
             <section data-component="ActiveBattle" class="active-battle">
                 <div class="active-battle__header">
                     <h2 class="active-battle__title">⚔️ Batalla en Vivo</h2>
@@ -262,138 +233,148 @@
                 </div>
             </section>
 
-
-
-
-
-
-            <!-- FEED DE MEMES -->
-            <section data-component="MemesFeed" class="memes-feed">
-                <h2 class="memes-feed__title">🔥 Últimos Memes Subidos</h2>
-
-                <div class="memes-grid">
-                    <!-- MEME CARD 1 -->
-                    <article data-component="MemeCard" class="meme-card">
-                        <div class="meme-card__header">
-                            <div class="meme-card__author">
-                                <img src="img/avatar1.png" alt="Avatar" class="meme-card__avatar">
-                                <span class="meme-card__username">@elbabass23</span>
-                            </div>
-                            <span class="meme-card__category">😂 Humor</span>
-                        </div>
-                        <img src="img/finalexamen.jpeg" alt="Meme gracioso" class="meme-card__image">
-                        <div class="meme-card__content">
-                            <h3 class="meme-card__title">Cuando terminas los exámenes</h3>
-                            <p class="meme-card__context">Esa sensación de libertad después de la última pregunta...</p>
-                            <div class="meme-card__battle-stats">
-                                <div class="meme-card__stat">
-                                    <i data-lucide="trophy" class="meme-card__stat-icon"></i>
-                                    <span class="meme-card__stat-text">12 victorias</span>
-                                </div>
-                                <div class="meme-card__stat">
-                                    <i data-lucide="x-circle"
-                                        class="meme-card__stat-icon meme-card__stat-icon--defeats"></i>
-                                    <span class="meme-card__stat-text">3 derrotas</span>
-                                </div>
-                                <div class="meme-card__win-ratio">
-                                    <span class="meme-card__ratio-label">Ratio:</span>
-                                    <span class="meme-card__ratio-value meme-card__ratio-value--high">80%</span>
-                                </div>
-                            </div>
-                            <div class="meme-card__status">
-                                <span class="meme-card__status-badge meme-card__status-badge--available">
-                                    <i data-lucide="zap" class="meme-card__status-icon"></i>
-                                    Disponible para batallas
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- MEME CARD 2 - MEME EN BATALLA -->
-                    <article data-component="MemeCard" class="meme-card">
-                        <div class="meme-card__header">
-                            <div class="meme-card__author">
-                                <img src="img/avatar2.png" alt="Avatar" class="meme-card__avatar">
-                                <span class="meme-card__username">@memeLord</span>
-                            </div>
-                            <span class="meme-card__category">💻 Programación</span>
-                        </div>
-                        <img src="img/primerintento.jpg" alt="Meme de programación" class="meme-card__image">
-                        <div class="meme-card__content">
-                            <h3 class="meme-card__title">Cuando funciona a la primera</h3>
-                            <p class="meme-card__context">Momento histórico en la vida de todo programador</p>
-                            <div class="meme-card__battle-stats">
-                                <div class="meme-card__stat">
-                                    <i data-lucide="trophy" class="meme-card__stat-icon"></i>
-                                    <span class="meme-card__stat-text">8 victorias</span>
-                                </div>
-                                <div class="meme-card__stat">
-                                    <i data-lucide="x-circle"
-                                        class="meme-card__stat-icon meme-card__stat-icon--defeats"></i>
-                                    <span class="meme-card__stat-text">7 derrotas</span>
-                                </div>
-                                <div class="meme-card__win-ratio">
-                                    <span class="meme-card__ratio-label">Ratio:</span>
-                                    <span class="meme-card__ratio-value meme-card__ratio-value--medium">53%</span>
-                                </div>
-                            </div>
-                            <div class="meme-card__status">
-                                <span class="meme-card__status-badge meme-card__status-badge--in-battle">
-                                    <i data-lucide="swords" class="meme-card__status-icon"></i>
-                                    En batalla activa
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- MEME CARD 3 - MEME NUEVO SIN BATALLAS -->
-                    <article data-component="MemeCard" class="meme-card">
-                        <div class="meme-card__header">
-                            <div class="meme-card__author">
-                                <img src="img/avatar3.png" alt="Avatar" class="meme-card__avatar">
-                                <span class="meme-card__username">@newbie_memer</span>
-                            </div>
-                            <span class="meme-card__category">🎓 Universidad</span>
-                        </div>
-                        <img src="img/facilexam.jpg" alt="Meme universitario" class="meme-card__image">
-                        <div class="meme-card__content">
-                            <h3 class="meme-card__title">Cuando el profesor dice "examen fácil"</h3>
-                            <p class="meme-card__context">Cuando el profesor dice "examen fácil, Todos sabemos que es una trampa...</p>
-                            <div class="meme-card__battle-stats">
-                                <div class="meme-card__stat meme-card__stat--new">
-                                    <i data-lucide="trophy" class="meme-card__stat-icon meme-card__stat-icon--new"></i>
-                                    <span class="meme-card__stat-text">0 victorias</span>
-                                </div>
-                                <div class="meme-card__stat meme-card__stat--new">
-                                    <i data-lucide="x-circle"
-                                        class="meme-card__stat-icon meme-card__stat-icon--new"></i>
-                                    <span class="meme-card__stat-text">0 derrotas</span>
-                                </div>
-                                <div class="meme-card__win-ratio">
-                                    <span class="meme-card__ratio-label">Ratio:</span>
-                                    <span class="meme-card__ratio-value meme-card__ratio-value--new">
-                                        <i data-lucide="star" class="meme-card__new-star"></i>
-                                        Nuevo
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="meme-card__status">
-                                <span class="meme-card__status-badge meme-card__status-badge--available">
-                                    <i data-lucide="zap" class="meme-card__status-icon"></i>
-                                    Esperando primera batalla
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Más tarjetas se repetirían aquí -->
+            <!-- TABLA DE BATALLAS COMPACTAS -->
+            <section data-component="BattlesList" class="battles-list">
+                <div class="battles-list__header">
+                    <h2 class="battles-list__title">📋 Todas las Batallas</h2>
+                    <div class="battles-list__filters">
+                        <select class="battles-list__filter">
+                            <option>Todas las categorías</option>
+                            <option>😂 Humor</option>
+                            <option>💻 Programación</option>
+                            <option>🎓 Universidad</option>
+                        </select>
+                        <select class="battles-list__filter">
+                            <option>Ordenar por tiempo</option>
+                            <option>Más recientes</option>
+                            <option>Más votos</option>
+                            <option>Más reñidas</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="memes-feed__load-more">
-                    <button class="load-more-btn">
-                        <i data-lucide="chevron-down" class="load-more-btn__icon"></i>
-                        Cargar más memes
+                <div data-component="BattlesTable" class="battles-table">
+                    <!-- ENCABEZADO DE TABLA -->
+                    <div class="battles-table__header">
+                        <div class="battles-table__header-cell">Batalla</div>
+                        <div class="battles-table__header-cell">Meme 1</div>
+                        <div class="battles-table__header-cell">Votos</div>
+                        <div class="battles-table__header-cell">VS</div>
+                        <div class="battles-table__header-cell">Votos</div>
+                        <div class="battles-table__header-cell">Meme 2</div>
+                        <div class="battles-table__header-cell">Tiempo</div>
+                    </div>
+
+                    <!-- FILA DE BATALLA 1 -->
+                    <div data-component="BattleRow" class="battles-table__row">
+                        <div class="battles-table__cell battles-table__battle-info">
+                            <div class="battles-table__battle-id">#1248</div>
+                            <div class="battles-table__battle-category">💻 Programación</div>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__meme">
+                            <img src="https://picsum.photos/60" alt="Meme 1" class="battles-table__meme-image">
+                            <div class="battles-table__meme-info">
+                                <div class="battles-table__meme-title">Bug en producción</div>
+                                <div class="battles-table__meme-author">@coder_pro</div>
+                            </div>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__votes">
+                            <button class="battles-table__vote-btn battles-table__vote-btn--left">
+                                <i data-lucide="zap" class="battles-table__vote-icon"></i>
+                                89
+                            </button>
+                            <div class="battles-table__percentage">67%</div>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__vs">
+                            <span class="battles-table__vs-text">VS</span>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__votes">
+                            <div class="battles-table__percentage">33%</div>
+                            <button class="battles-table__vote-btn battles-table__vote-btn--right">
+                                44
+                                <i data-lucide="zap" class="battles-table__vote-icon"></i>
+                            </button>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__meme battles-table__meme--right">
+                            <div class="battles-table__meme-info battles-table__meme-info--right">
+                                <div class="battles-table__meme-title">Código que funciona</div>
+                                <div class="battles-table__meme-author">@dev_wizard</div>
+                            </div>
+                            <img src="https://picsum.photos/60" alt="Meme 2" class="battles-table__meme-image">
+                        </div>
+
+                        <div class="battles-table__cell battles-table__time">
+                            <i data-lucide="clock" class="battles-table__time-icon"></i>
+                            <span>14:23:45</span>
+                        </div>
+                    </div>
+
+                    <!-- FILA DE BATALLA 2 -->
+                    <div data-component="BattleRow" class="battles-table__row">
+                        <div class="battles-table__cell battles-table__battle-info">
+                            <div class="battles-table__battle-id">#1249</div>
+                            <div class="battles-table__battle-category">😂 Humor</div>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__meme">
+                            <img src="https://picsum.photos/60" alt="Meme 1" class="battles-table__meme-image">
+                            <div class="battles-table__meme-info">
+                                <div class="battles-table__meme-title">Cuando es lunes</div>
+                                <div class="battles-table__meme-author">@monday_hater</div>
+                            </div>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__votes">
+                            <button class="battles-table__vote-btn battles-table__vote-btn--left">
+                                <i data-lucide="zap" class="battles-table__vote-icon"></i>
+                                124
+                            </button>
+                            <div class="battles-table__percentage">72%</div>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__vs">
+                            <span class="battles-table__vs-text">VS</span>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__votes">
+                            <div class="battles-table__percentage">28%</div>
+                            <button class="battles-table__vote-btn battles-table__vote-btn--right">
+                                48
+                                <i data-lucide="zap" class="battles-table__vote-icon"></i>
+                            </button>
+                        </div>
+
+                        <div class="battles-table__cell battles-table__meme battles-table__meme--right">
+                            <div class="battles-table__meme-info battles-table__meme-info--right">
+                                <div class="battles-table__meme-title">Viernes llegó</div>
+                                <div class="battles-table__meme-author">@weekend_lover</div>
+                            </div>
+                            <img src="https://picsum.photos/60" alt="Meme 2" class="battles-table__meme-image">
+                        </div>
+
+                        <div class="battles-table__cell battles-table__time">
+                            <i data-lucide="clock" class="battles-table__time-icon"></i>
+                            <span>12:15:30</span>
+                        </div>
+                    </div>
+
+                    <!-- Más filas siguiendo el mismo patrón -->
+
+                </div>
+
+                <div class="battles-list__load-more">
+                    <button class="battles-list__load-btn">
+                        <i data-lucide="chevron-down" class="battles-list__load-icon"></i>
+                        Ver más batallas
                     </button>
                 </div>
             </section>
+
 
         </main>
     </div>
