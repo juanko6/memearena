@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeArena - Batallas de Memes</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Iconos de Lucide para tener iconos bonitos -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="page-layout">
+
+    <!-- BARRA LATERAL IZQUIERDA -->
+    <aside data-component="Sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🥊</span>
+                <h1 class="sidebar__logo-text">MemeArena</h1>
+            </div>
+        </div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__menu-item">
+                    <a href="#inicio" class="sidebar__link sidebar__link--active">
+                        <i data-lucide="home" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Inicio</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#batallas" class="sidebar__link">
+                        <i data-lucide="zap" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Batallas</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#tabla-lideres" class="sidebar__link">
+                        <i data-lucide="trophy" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Tabla de Líderes</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#busqueda" class="sidebar__link">
+                        <i data-lucide="search" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Búsqueda</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#mis-memes" class="sidebar__link">
+                        <i data-lucide="image" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Mis Memes</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar__footer">
+            <a href="login.html" class="sidebar__login-btn">
+                <i data-lucide="log-in" class="sidebar__icon"></i>
+                <span class="sidebar__text">Iniciar Sesión</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-layout">
+
+        <!-- NAVEGACIÓN SUPERIOR -->
+        <header data-component="TopNav" class="top-nav">
+            <div class="top-nav__left">
+                <div class="top-nav__logo">
+                    <span class="top-nav__logo-icon">🥊</span>
+                    <span class="top-nav__logo-text">MemeArena</span>
+                </div>
+            </div>
+
+            <div class="top-nav__right">
+                <button class="top-nav__theme-btn" title="Cambiar tema">
+                    <i data-lucide="moon" class="top-nav__icon"></i>
+                </button>
+                <button class="top-nav__notifications-btn" title="Notificaciones">
+                    <i data-lucide="bell" class="top-nav__icon"></i>
+                </button>
+                <a href="login.html" class="top-nav__login-btn">
+                    <i data-lucide="user" class="top-nav__icon"></i>
+                    <span>Login</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- CONTENIDO CENTRAL -->
+        <main data-outlet class="main-content">
+
+            <!-- HERO SECTION -->
+            <section data-component="Hero" class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">⚔️ La Arena Definitiva de Memes</h1>
+                    <p class="hero__subtitle">Sube tus memes y deja que la comunidad decida quién es el campeón</p>
+                    <div class="hero__stats">
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">1,234</span>
+                            <span class="hero__stat-label">Memes Subidos</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">856</span>
+                            <span class="hero__stat-label">Batallas Activas</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">2,341</span>
+                            <span class="hero__stat-label">Usuarios Activos</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BARRA DE BÚSQUEDA -->
+            <section data-component="SearchBar" class="search-section">
+                <div class="search-bar">
+                    <div class="search-bar__input-group">
+                        <i data-lucide="search" class="search-bar__icon"></i>
+                        <input type="text" class="search-bar__input"
+                            placeholder="Buscar memes por título, categoría, usuario...">
+                        <button class="search-bar__btn">Buscar</button>
+                    </div>
+                    <div class="search-bar__filters">
+                        <select class="search-bar__filter">
+                            <option>Todas las categorías</option>
+                            <option>😂 Humor</option>
+                            <option>🎓 Universidad</option>
+                            <option>💻 Programación</option>
+                            <option>⚽ Deportes</option>
+                        </select>
+                        <select class="search-bar__filter">
+                            <option>Todos los tiempos</option>
+                            <option>Hoy</option>
+                            <option>Esta semana</option>
+                            <option>Este mes</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BATALLA ACTIVA DESTACADA -->
+            <section data-component="ActiveBattle" class="active-battle">
+                <div class="active-battle__header">
+                    <h2 class="active-battle__title">⚔️ Batalla en Vivo</h2>
+                    <div class="active-battle__timer">
+                        <i data-lucide="clock" class="active-battle__timer-icon"></i>
+                        <span class="active-battle__time-remaining">18:45:32</span>
+                    </div>
+                </div>
+
+                <div data-component="BattleCard" class="battle-card">
+                    <div class="battle-card__info">
+                        <span class="battle-card__id">Batalla #1247</span>
+                        <span class="battle-card__category-match">Categoría: 😂 Humor</span>
+                    </div>
+
+                    <div class="battle-card__arena">
+                        <!-- MEME IZQUIERDO -->
+                        <div data-component="BattleMeme" class="battle-meme battle-meme--left">
+                            <div class="battle-meme__header">
+                                <div class="battle-meme__author">
+                                    <img src="img/avatar4.png" alt="Avatar" class="battle-meme__avatar">
+                                    <span class="battle-meme__username">@memeMaster</span>
+                                </div>
+                                <div class="battle-meme__votes">
+                                    <span class="battle-meme__vote-count">156 votos</span>
+                                </div>
+                            </div>
+
+                            <div class="battle-meme__image-container">
+                                <img src="img/lunes.jpg" alt="Meme: Lunes por la mañana" class="battle-meme__image">
+                                <div class="battle-meme__overlay">
+                                    <h3 class="battle-meme__title">Lunes por la mañana</h3>
+                                </div>
+                            </div>
+
+                            <div class="battle-meme__stats">
+                                <div class="battle-meme__record">
+                                    <i data-lucide="trophy" class="battle-meme__stat-icon"></i>
+                                    <span>23W - 8L</span>
+                                </div>
+                                <div class="battle-meme__win-rate">
+                                    <span class="battle-meme__win-rate-value">74%</span>
+                                </div>
+                            </div>
+
+                            <button class="battle-meme__vote-btn battle-meme__vote-btn--left">
+                                <i data-lucide="zap" class="battle-meme__vote-icon"></i>
+                                ¡Votar por este!
+                            </button>
+                        </div>
+
+                        <!-- SEPARADOR VS -->
+                        <div data-component="BattleVersus" class="battle-vs">
+                            <div class="battle-vs__circle">
+                                <span class="battle-vs__text">VS</span>
+                            </div>
+                            <div class="battle-vs__progress">
+                                <div class="battle-vs__progress-bar">
+                                    <div class="battle-vs__progress-fill" style="width: 62%;"></div>
+                                </div>
+                                <div class="battle-vs__progress-labels">
+                                    <span class="battle-vs__progress-label">62%</span>
+                                    <span class="battle-vs__progress-label">38%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MEME DERECHO -->
+                        <div data-component="BattleMeme" class="battle-meme battle-meme--right">
+                            <div class="battle-meme__header">
+                                <div class="battle-meme__votes">
+                                    <span class="battle-meme__vote-count">95 votos</span>
+                                </div>
+                                <div class="battle-meme__author">
+                                    <img src="img/avatar5.png" alt="Avatar" class="battle-meme__avatar">
+                                    <span class="battle-meme__username">@jokeKing</span>
+                                </div>
+                            </div>
+
+                            <div class="battle-meme__image-container">
+                                <img src="img/viernestarde.jpg" alt="Meme: Viernes por la tarde"
+                                    class="battle-meme__image">
+                                <div class="battle-meme__overlay">
+                                    <h3 class="battle-meme__title">Viernes por la tarde</h3>
+                                </div>
+                            </div>
+
+                            <div class="battle-meme__stats">
+                                <div class="battle-meme__record">
+                                    <i data-lucide="trophy" class="battle-meme__stat-icon"></i>
+                                    <span>15W - 12L</span>
+                                </div>
+                                <div class="battle-meme__win-rate">
+                                    <span class="battle-meme__win-rate-value">56%</span>
+                                </div>
+                            </div>
+
+                            <button class="battle-meme__vote-btn battle-meme__vote-btn--right">
+                                <i data-lucide="zap" class="battle-meme__vote-icon"></i>
+                                ¡Votar por este!
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="battle-card__footer">
+                        <div class="battle-card__total-votes">
+                            <i data-lucide="users" class="battle-card__footer-icon"></i>
+                            <span>251 usuarios han votado</span>
+                        </div>
+                        <div class="battle-card__sharing">
+                            <button class="battle-card__share-btn">
+                                <i data-lucide="share-2" class="battle-card__share-icon"></i>
+                                Compartir batalla
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- FEED DE MEMES -->
+            <section data-component="MemesFeed" class="memes-feed">
+                <h2 class="memes-feed__title">🔥 Últimos Memes Subidos</h2>
+
+                <div class="memes-grid">
+                    <!-- MEME CARD 1 -->
+                    <article data-component="MemeCard" class="meme-card">
+                        <div class="meme-card__header">
+                            <div class="meme-card__author">
+                                <img src="img/avatar1.png" alt="Avatar" class="meme-card__avatar">
+                                <span class="meme-card__username">@elbabass23</span>
+                            </div>
+                            <span class="meme-card__category">😂 Humor</span>
+                        </div>
+                        <img src="img/finalexamen.jpeg" alt="Meme gracioso" class="meme-card__image">
+                        <div class="meme-card__content">
+                            <h3 class="meme-card__title">Cuando terminas los exámenes</h3>
+                            <p class="meme-card__context">Esa sensación de libertad después de la última pregunta...</p>
+                            <div class="meme-card__battle-stats">
+                                <div class="meme-card__stat">
+                                    <i data-lucide="trophy" class="meme-card__stat-icon"></i>
+                                    <span class="meme-card__stat-text">12 victorias</span>
+                                </div>
+                                <div class="meme-card__stat">
+                                    <i data-lucide="x-circle"
+                                        class="meme-card__stat-icon meme-card__stat-icon--defeats"></i>
+                                    <span class="meme-card__stat-text">3 derrotas</span>
+                                </div>
+                                <div class="meme-card__win-ratio">
+                                    <span class="meme-card__ratio-label">Ratio:</span>
+                                    <span class="meme-card__ratio-value meme-card__ratio-value--high">80%</span>
+                                </div>
+                            </div>
+                            <div class="meme-card__status">
+                                <span class="meme-card__status-badge meme-card__status-badge--available">
+                                    <i data-lucide="zap" class="meme-card__status-icon"></i>
+                                    Disponible para batallas
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- MEME CARD 2 - MEME EN BATALLA -->
+                    <article data-component="MemeCard" class="meme-card">
+                        <div class="meme-card__header">
+                            <div class="meme-card__author">
+                                <img src="img/avatar2.png" alt="Avatar" class="meme-card__avatar">
+                                <span class="meme-card__username">@memeLord</span>
+                            </div>
+                            <span class="meme-card__category">💻 Programación</span>
+                        </div>
+                        <img src="img/primerintento.jpg" alt="Meme de programación" class="meme-card__image">
+                        <div class="meme-card__content">
+                            <h3 class="meme-card__title">Cuando funciona a la primera</h3>
+                            <p class="meme-card__context">Momento histórico en la vida de todo programador</p>
+                            <div class="meme-card__battle-stats">
+                                <div class="meme-card__stat">
+                                    <i data-lucide="trophy" class="meme-card__stat-icon"></i>
+                                    <span class="meme-card__stat-text">8 victorias</span>
+                                </div>
+                                <div class="meme-card__stat">
+                                    <i data-lucide="x-circle"
+                                        class="meme-card__stat-icon meme-card__stat-icon--defeats"></i>
+                                    <span class="meme-card__stat-text">7 derrotas</span>
+                                </div>
+                                <div class="meme-card__win-ratio">
+                                    <span class="meme-card__ratio-label">Ratio:</span>
+                                    <span class="meme-card__ratio-value meme-card__ratio-value--medium">53%</span>
+                                </div>
+                            </div>
+                            <div class="meme-card__status">
+                                <span class="meme-card__status-badge meme-card__status-badge--in-battle">
+                                    <i data-lucide="swords" class="meme-card__status-icon"></i>
+                                    En batalla activa
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- MEME CARD 3 - MEME NUEVO SIN BATALLAS -->
+                    <article data-component="MemeCard" class="meme-card">
+                        <div class="meme-card__header">
+                            <div class="meme-card__author">
+                                <img src="img/avatar3.png" alt="Avatar" class="meme-card__avatar">
+                                <span class="meme-card__username">@newbie_memer</span>
+                            </div>
+                            <span class="meme-card__category">🎓 Universidad</span>
+                        </div>
+                        <img src="img/facilexam.jpg" alt="Meme universitario" class="meme-card__image">
+                        <div class="meme-card__content">
+                            <h3 class="meme-card__title">Cuando el profesor dice "examen fácil"</h3>
+                            <p class="meme-card__context">Cuando el profesor dice "examen fácil, Todos sabemos que es una trampa...</p>
+                            <div class="meme-card__battle-stats">
+                                <div class="meme-card__stat meme-card__stat--new">
+                                    <i data-lucide="trophy" class="meme-card__stat-icon meme-card__stat-icon--new"></i>
+                                    <span class="meme-card__stat-text">0 victorias</span>
+                                </div>
+                                <div class="meme-card__stat meme-card__stat--new">
+                                    <i data-lucide="x-circle"
+                                        class="meme-card__stat-icon meme-card__stat-icon--new"></i>
+                                    <span class="meme-card__stat-text">0 derrotas</span>
+                                </div>
+                                <div class="meme-card__win-ratio">
+                                    <span class="meme-card__ratio-label">Ratio:</span>
+                                    <span class="meme-card__ratio-value meme-card__ratio-value--new">
+                                        <i data-lucide="star" class="meme-card__new-star"></i>
+                                        Nuevo
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="meme-card__status">
+                                <span class="meme-card__status-badge meme-card__status-badge--available">
+                                    <i data-lucide="zap" class="meme-card__status-icon"></i>
+                                    Esperando primera batalla
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Más tarjetas se repetirían aquí -->
+                </div>
+
+                <div class="memes-feed__load-more">
+                    <button class="load-more-btn">
+                        <i data-lucide="chevron-down" class="load-more-btn__icon"></i>
+                        Cargar más memes
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer data-component="Footer" class="footer">
+        <div class="footer__container">
+            <!-- SECCIÓN 1: LOGO -->
+            <div data-component="FooterSection" class="footer__section">
+                <div class="footer__logo">
+                    <span class="footer__logo-icon">🥊</span>
+                    <h3 class="footer__logo-text">MemeArena</h3>
+                </div>
+                <p class="footer__description">
+                    La plataforma donde los mejores memes luchan por la gloria.
+                    ¡Únete y demuestra quién crea el contenido más épico!
+                </p>
+            </div>
+
+            <!-- SECCIÓN 2: REDES SOCIALES -->
+            <div data-component="FooterSection" class="footer__section">
+                <h4 class="footer__section-title">Síguenos</h4>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="twitter" class="footer__social-icon"></i>
+                        Twitter
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="instagram" class="footer__social-icon"></i>
+                        Instagram
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="discord" class="footer__social-icon"></i>
+                        Discord
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="youtube" class="footer__social-icon"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: SPONSORS -->
+            <div data-component="FooterSection" class="footer__section">
+                <h4 class="footer__section-title">Patrocinadores</h4>
+                <div class="footer__sponsors">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 1" class="footer__sponsor-logo">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 2" class="footer__sponsor-logo">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 3" class="footer__sponsor-logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copyright">© 2025 MemeArena. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
