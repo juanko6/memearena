@@ -1,0 +1,7 @@
+/* === ARCHIVO PRINCIPAL QUE IMPORTA TODOS LOS DEMÁS === */
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('battles.css');
+@import url('leaderboards.css');
+@import url('responsive.css');

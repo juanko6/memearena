@@ -1,0 +1,463 @@
+/* === COMPONENTE: HERO === */
+.hero {
+    background: var(--primary-color);
+    margin-top: 2rem;
+    color: var(--white);
+    padding: 4rem 2rem;
+    width: 100%;
+    text-align: center; 
+    
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero__stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* === COMPONENTE: SEARCH BAR === */
+.search-section {
+    margin-bottom: 3rem;
+}
+
+.search-bar {
+    background: var(--white);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.search-bar__input-group {
+    display: flex;
+    align-items: center;
+    background: var(--gray-50);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar__icon {
+    width: 20px;
+    height: 20px;
+    color: var(--gray-400);
+    margin-right: 0.75rem;
+}
+
+.search-bar__input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--gray-800);
+}
+
+.search-bar__input::placeholder {
+    color: var(--gray-400);
+}
+
+.search-bar__btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-bar__btn:hover {
+    background: var(--primary-dark);
+}
+
+.search-bar__filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-bar__filter {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-bar__filter:hover,
+.search-bar__filter:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* === COMPONENTE: MEMES FEED === */
+.memes-feed {
+    margin: 2rem;
+    margin-bottom: 3rem;
+}
+
+.memes-feed__title {
+    font-size: 2rem;
+    color: var(--gray-800);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.memes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* === COMPONENTE: MEME CARD === */
+.meme-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.meme-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.meme-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.meme-card__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.meme-card__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.meme-card__username {
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.meme-card__category {
+    background: var(--gray-100);
+    color: var(--gray-600);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+}
+
+.meme-card__image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.meme-card__content {
+    padding: 1rem;
+}
+
+.meme-card__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.meme-card__context {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.meme-card__battle-stats {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.meme-card__stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--gray-500);
+    font-size: 0.875rem;
+}
+
+.meme-card__stat-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.meme-card__stat-icon--defeats {
+    color: var(--gray-400);
+}
+
+.meme-card__win-ratio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meme-card__ratio-label {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+}
+
+.meme-card__ratio-value {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.meme-card__ratio-value--high {
+    color: #10b981;
+}
+
+.meme-card__ratio-value--medium {
+    color: #f59e0b;
+}
+
+.meme-card__ratio-value--low {
+    color: #ef4444;
+}
+
+.meme-card__stat--new {
+    color: var(--gray-400);
+    opacity: 0.7;
+}
+
+.meme-card__stat-icon--new {
+    color: var(--gray-300);
+}
+
+.meme-card__ratio-value--new {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.meme-card__new-star {
+    width: 14px;
+    height: 14px;
+    color: #f59e0b;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.meme-card__status {
+    margin-top: 1rem;
+}
+
+.meme-card__status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.meme-card__status-badge--available {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.meme-card__status-badge--in-battle {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.meme-card__status-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.memes-feed__load-more {
+    text-align: center;
+}
+
+.load-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.load-more-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.load-more-btn__icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* === COMPONENTE: FOOTER === */
+.footer {
+    background: var(--primary-color);
+    color: var(--gray-300);
+    margin-left: var(--sidebar-width);
+    margin-top: 2rem;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer__logo-icon {
+    font-size: 2rem;
+}
+
+.footer__logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.footer__description {
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+.footer__section-title {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gray-400);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer__social-link:hover {
+    color: var(--white);
+}
+
+.footer__social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer__sponsors {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__sponsor-logo {
+    height: 40px;
+    width: auto;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.footer__sponsor-logo:hover {
+    opacity: 1;
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--gray-800);
+    background: var(--gray-800);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer__copyright {
+    color: var(--gray-500);
+}

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeArena - Batallas de Memes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Iconos de Lucide para tener iconos bonitos -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="page-layout">
+
+    <!-- BARRA LATERAL IZQUIERDA -->
+    <aside data-component="Sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🥊</span>
+                <h1 class="sidebar__logo-text">MemeArena</h1>
+            </div>
+        </div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__menu-item">
+                    <a href="index.html" class="sidebar__link sidebar__link--active">
+                        <i data-lucide="home" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Inicio</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#batallas" class="sidebar__link">
+                        <i data-lucide="zap" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Batallas</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="ranking.html" class="sidebar__link">
+                        <i data-lucide="trophy" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Tabla de Líderes</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#busqueda" class="sidebar__link">
+                        <i data-lucide="search" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Búsqueda</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#mis-memes" class="sidebar__link">
+                        <i data-lucide="image" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Mis Memes</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar__footer">
+            <a href="login.html" class="sidebar__login-btn">
+                <i data-lucide="log-in" class="sidebar__icon"></i>
+                <span class="sidebar__text">Iniciar Sesión</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-layout">
+
+        <!-- NAVEGACIÓN SUPERIOR -->
+        <header data-component="TopNav" class="top-nav">
+            <div class="top-nav__left">
+                <div class="top-nav__logo">
+                    <span class="top-nav__logo-icon">🥊</span>
+                    <span class="top-nav__logo-text">MemeArena</span>
+                </div>
+            </div>
+
+            <div class="top-nav__right">
+                <button class="top-nav__theme-btn" title="Cambiar tema">
+                    <i data-lucide="moon" class="top-nav__icon"></i>
+                </button>
+                <button class="top-nav__notifications-btn" title="Notificaciones">
+                    <i data-lucide="bell" class="top-nav__icon"></i>
+                </button>
+                <a href="login.html" class="top-nav__login-btn">
+                    <i data-lucide="user" class="top-nav__icon"></i>
+                    <span>Login</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- CONTENIDO CENTRAL -->
+        <main data-outlet class="main-content">
+
+            <!-- SECCIÓN DE LEADERBOARDS -->
+            <section data-component="Leaderboards" class="leaderboards">
+                <div class="leaderboards__header">
+                    <h1 class="leaderboards__title">Tabla de Líderes</h1>
+                    <p class="leaderboards__subtitle">Los memes más exitosos de la arena</p>
+                </div>
+
+                <div class="leaderboards__filters">
+                    <div data-component="LeaderboardFilters" class="leaderboard-filters">
+                        <button class="leaderboard-filters__btn leaderboard-filters__btn--active">
+                            <i data-lucide="filter" class="leaderboard-filters__icon"></i>
+                            Filtros
+                        </button>
+                        <select class="leaderboard-filters__select">
+                            <option value="global">🌍 Global</option>
+                            <option value="humor">😂 Humor</option>
+                            <option value="programacion">💻 Programación</option>
+                            <option value="universidad">🎓 Universidad</option>
+                        </select>
+                        <div class="leaderboard-filters__search">
+                            <input type="text" placeholder="Buscar usuario" class="leaderboard-filters__input">
+                            <button class="leaderboard-filters__search-btn">
+                                <i data-lucide="search" class="leaderboard-filters__search-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TOP 5 DESTACADOS -->
+                <div data-component="TopMemes" class="top-memes">
+
+                    <!-- MEME #1 - DESTACADO GRANDE -->
+                    <div data-component="TopMemeCard" class="top-meme-card top-meme-card--champion">
+                        <div class="top-meme-card__rank-number">1</div>
+                        <div class="top-meme-card__content">
+                            <div class="top-meme-card__avatar-section">
+                                <img src="https://via.placeholder.com/80" alt="Avatar"
+                                    class="top-meme-card__avatar top-meme-card__avatar--champion">
+                            </div>
+                            <div class="top-meme-card__info">
+                                <h3 class="top-meme-card__username">meme master</h3>
+                                <div class="top-meme-card__title">🏆 GOAT Meme</div>
+                                <div class="top-meme-card__stats-row">
+                                    <div class="top-meme-card__stat">
+                                        <span class="top-meme-card__stat-number">234</span>
+                                        <span class="top-meme-card__stat-label">Memes</span>
+                                    </div>
+                                    <div class="top-meme-card__stat">
+                                        <span class="top-meme-card__stat-number">189W</span>
+                                        <span class="top-meme-card__stat-label">156L</span>
+                                    </div>
+                                    <div class="top-meme-card__winrate">
+                                        <span class="top-meme-card__winrate-number">78%</span>
+                                        <span class="top-meme-card__winrate-label">Win Rate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GRID PUESTOS 2-5 -->
+                    <div class="top-memes__horizontal">
+
+                        <!-- MEME #2 -->
+                        <div data-component="TopMemeCard" class="top-meme-card-split">
+                            <!-- PARTE SUPERIOR: 3 COLUMNAS -->
+                            <div class="top-meme-card-split__top">
+                                <div class="top-meme-card-split__rank">2</div>
+                                <img src="https://via.placeholder.com/50" alt="Avatar"
+                                    class="top-meme-card-split__avatar">
+                                <div class="top-meme-card-split__text">
+                                    <div class="top-meme-card-split__username">S levche</div>
+                                    <div class="top-meme-card-split__tag">#Italy</div>
+                                    <div class="top-meme-card-split__region">EUW</div>
+                                </div>
+                            </div>
+
+                            <!-- PARTE INFERIOR: ESTADÍSTICAS -->
+                            <div class="top-meme-card-split__bottom">
+                                <div class="top-meme-card-split__left-stats">
+                                    <img src="https://via.placeholder.com/24" alt="Rank"
+                                        class="top-meme-card-split__rank-icon">
+                                    <div class="top-meme-card-split__rank-info">
+                                        <span class="top-meme-card-split__tier">Challenger</span>
+                                        <span class="top-meme-card-split__lp">1,180 LP</span>
+                                    </div>
+                                </div>
+                                <div class="top-meme-card-split__right-stats">
+                                    <div class="top-meme-card-split__record">91W 65L</div>
+                                    <div class="top-meme-card-split__winrate">58% Win Rate</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MEME #3 -->
+                        <div data-component="TopMemeCard" class="top-meme-card-split">
+                            <div class="top-meme-card-split__top">
+                                <div class="top-meme-card-split__rank">3</div>
+                                <img src="https://via.placeholder.com/50" alt="Avatar"
+                                    class="top-meme-card-split__avatar">
+                                <div class="top-meme-card-split__text">
+                                    <div class="top-meme-card-split__username">geonbu</div>
+                                    <div class="top-meme-card-split__tag">#0618</div>
+                                    <div class="top-meme-card-split__region">KR</div>
+                                </div>
+                            </div>
+
+                            <div class="top-meme-card-split__bottom">
+                                <div class="top-meme-card-split__left-stats">
+                                    <img src="https://via.placeholder.com/24" alt="Rank"
+                                        class="top-meme-card-split__rank-icon">
+                                    <div class="top-meme-card-split__rank-info">
+                                        <span class="top-meme-card-split__tier">Challenger</span>
+                                        <span class="top-meme-card-split__lp">1,770 LP</span>
+                                    </div>
+                                </div>
+                                <div class="top-meme-card-split__right-stats">
+                                    <div class="top-meme-card-split__record">462W 388L</div>
+                                    <div class="top-meme-card-split__winrate">54% Win Rate</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MEME #4 -->
+                        <div data-component="TopMemeCard" class="top-meme-card-split">
+                            <div class="top-meme-card-split__top">
+                                <div class="top-meme-card-split__rank">4</div>
+                                <img src="https://via.placeholder.com/50" alt="Avatar"
+                                    class="top-meme-card-split__avatar">
+                                <div class="top-meme-card-split__text">
+                                    <div class="top-meme-card-split__username">dusklol</div>
+                                    <div class="top-meme-card-split__tag">#000</div>
+                                    <div class="top-meme-card-split__region">EUW</div>
+                                </div>
+                            </div>
+
+                            <div class="top-meme-card-split__bottom">
+                                <div class="top-meme-card-split__left-stats">
+                                    <img src="https://via.placeholder.com/24" alt="Rank"
+                                        class="top-meme-card-split__rank-icon">
+                                    <div class="top-meme-card-split__rank-info">
+                                        <span class="top-meme-card-split__tier">Challenger</span>
+                                        <span class="top-meme-card-split__lp">1,696 LP</span>
+                                    </div>
+                                </div>
+                                <div class="top-meme-card-split__right-stats">
+                                    <div class="top-meme-card-split__record">264W 193L</div>
+                                    <div class="top-meme-card-split__winrate">58% Win Rate</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MEME #5 -->
+                        <div data-component="TopMemeCard" class="top-meme-card-split">
+                            <div class="top-meme-card-split__top">
+                                <div class="top-meme-card-split__rank">5</div>
+                                <img src="https://via.placeholder.com/50" alt="Avatar"
+                                    class="top-meme-card-split__avatar">
+                                <div class="top-meme-card-split__text">
+                                    <div class="top-meme-card-split__username">Isles</div>
+                                    <div class="top-meme-card-split__tag">#000</div>
+                                    <div class="top-meme-card-split__region">NA</div>
+                                </div>
+                            </div>
+
+                            <div class="top-meme-card-split__bottom">
+                                <div class="top-meme-card-split__left-stats">
+                                    <img src="https://via.placeholder.com/24" alt="Rank"
+                                        class="top-meme-card-split__rank-icon">
+                                    <div class="top-meme-card-split__rank-info">
+                                        <span class="top-meme-card-split__tier">Challenger</span>
+                                        <span class="top-meme-card-split__lp">1,688 LP</span>
+                                    </div>
+                                </div>
+                                <div class="top-meme-card-split__right-stats">
+                                    <div class="top-meme-card-split__record">607W 535L</div>
+                                    <div class="top-meme-card-split__winrate">53% Win Rate</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- TABLA SIMPLIFICADA (6 en adelante) -->
+                    <div data-component="LeaderboardTable" class="leaderboard-table">
+                        <div class="leaderboard-table__header">
+                            <div class="leaderboard-table__header-cell">Rank</div>
+                            <div class="leaderboard-table__header-cell">Usuario</div>
+                            <div class="leaderboard-table__header-cell">Título</div>
+                            <div class="leaderboard-table__header-cell">Win Rate</div>
+                        </div>
+
+                        <!-- FILAS DE LA TABLA -->
+                        <div data-component="LeaderboardRow" class="leaderboard-table__row">
+                            <div class="leaderboard-table__cell leaderboard-table__rank">6</div>
+                            <div class="leaderboard-table__cell leaderboard-table__user">
+                                <img src="https://via.placeholder.com/32" alt="Avatar"
+                                    class="leaderboard-table__avatar">
+                                <span class="leaderboard-table__username">epic_memer</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__title">🏆 Challenger</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__winrate">58%</span>
+                                <span class="leaderboard-table__record">89W 64L</span>
+                            </div>
+                        </div>
+
+                        <div data-component="LeaderboardRow" class="leaderboard-table__row">
+                            <div class="leaderboard-table__cell leaderboard-table__rank">7</div>
+                            <div class="leaderboard-table__cell leaderboard-table__user">
+                                <img src="https://via.placeholder.com/32" alt="Avatar"
+                                    class="leaderboard-table__avatar">
+                                <span class="leaderboard-table__username">funny_student</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__title">🏆 Challenger</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__winrate">55%</span>
+                                <span class="leaderboard-table__record">76W 62L</span>
+                            </div>
+                        </div>
+
+                        <div data-component="LeaderboardRow" class="leaderboard-table__row">
+                            <div class="leaderboard-table__cell leaderboard-table__rank">8</div>
+                            <div class="leaderboard-table__cell leaderboard-table__user">
+                                <img src="https://via.placeholder.com/32" alt="Avatar"
+                                    class="leaderboard-table__avatar">
+                                <span class="leaderboard-table__username">code_joker</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__title">🏆 Challenger</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__winrate">52%</span>
+                                <span class="leaderboard-table__record">67W 62L</span>
+                            </div>
+                        </div>
+
+                        <div data-component="LeaderboardRow" class="leaderboard-table__row">
+                            <div class="leaderboard-table__cell leaderboard-table__rank">9</div>
+                            <div class="leaderboard-table__cell leaderboard-table__user">
+                                <img src="https://via.placeholder.com/32" alt="Avatar"
+                                    class="leaderboard-table__avatar">
+                                <span class="leaderboard-table__username">meme_rookie</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__title">🏆 Challenger</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__winrate">48%</span>
+                                <span class="leaderboard-table__record">58W 63L</span>
+                            </div>
+                        </div>
+
+                        <div data-component="LeaderboardRow" class="leaderboard-table__row">
+                            <div class="leaderboard-table__cell leaderboard-table__rank">10</div>
+                            <div class="leaderboard-table__cell leaderboard-table__user">
+                                <img src="https://via.placeholder.com/32" alt="Avatar"
+                                    class="leaderboard-table__avatar">
+                                <span class="leaderboard-table__username">newbie_creator</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__title">🏆 Challenger</span>
+                            </div>
+                            <div class="leaderboard-table__cell">
+                                <span class="leaderboard-table__winrate">45%</span>
+                                <span class="leaderboard-table__record">49W 60L</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer data-component="Footer" class="footer">
+        <div class="footer__container">
+            <!-- SECCIÓN 1: LOGO -->
+            <div data-component="FooterSection" class="footer__section">
+                <div class="footer__logo">
+                    <span class="footer__logo-icon">🥊</span>
+                    <h3 class="footer__logo-text">MemeArena</h3>
+                </div>
+                <p class="footer__description">
+                    La plataforma donde los mejores memes luchan por la gloria.
+                    ¡Únete y demuestra quién crea el contenido más épico!
+                </p>
+            </div>
+
+            <!-- SECCIÓN 2: REDES SOCIALES -->
+            <div data-component="FooterSection" class="footer__section">
+                <h4 class="footer__section-title">Síguenos</h4>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="twitter" class="footer__social-icon"></i>
+                        Twitter
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="instagram" class="footer__social-icon"></i>
+                        Instagram
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="discord" class="footer__social-icon"></i>
+                        Discord
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="youtube" class="footer__social-icon"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: SPONSORS -->
+            <div data-component="FooterSection" class="footer__section">
+                <h4 class="footer__section-title">Patrocinadores</h4>
+                <div class="footer__sponsors">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 1" class="footer__sponsor-logo">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 2" class="footer__sponsor-logo">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 3" class="footer__sponsor-logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copyright">© 2025 MemeArena. - juanko6</p>
+        </div>
+    </footer>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
