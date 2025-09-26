@@ -12,58 +12,6 @@
 
 <body class="page-layout">
 
-    <!-- BARRA LATERAL IZQUIERDA -->
-    <aside data-component="Sidebar" class="sidebar">
-        <div class="sidebar__header">
-            <div class="sidebar__logo">
-                <span class="sidebar__logo-icon">🥊</span>
-                <h1 class="sidebar__logo-text">MemeArena</h1>
-            </div>
-        </div>
-
-        <nav class="sidebar__nav">
-            <ul class="sidebar__menu">
-                <li class="sidebar__menu-item">
-                    <a href="index.html" class="sidebar__link sidebar__link--active">
-                        <i data-lucide="home" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Inicio</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="battle.html" class="sidebar__link">
-                        <i data-lucide="zap" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Batallas</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="ranking.html" class="sidebar__link">
-                        <i data-lucide="trophy" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Tabla de Líderes</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="#busqueda" class="sidebar__link">
-                        <i data-lucide="search" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Búsqueda</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="#mis-memes" class="sidebar__link">
-                        <i data-lucide="image" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Mis Memes</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="sidebar__footer">
-            <a href="login.html" class="sidebar__login-btn">
-                <i data-lucide="log-in" class="sidebar__icon"></i>
-                <span class="sidebar__text">Iniciar Sesión</span>
-            </a>
-        </div>
-    </aside>
-
     <!-- CONTENIDO PRINCIPAL -->
     <div class="main-layout">
 
@@ -75,6 +23,21 @@
                     <span class="top-nav__logo-text">MemeArena</span>
                 </div>
             </div>
+
+            <!-- NAVEGACIÓN PRINCIPAL -->
+            <nav class="top-nav__navigation" aria-label="Main">
+                <ul class="top-nav__menu">
+                    <li class="top-nav__menu-item">
+                        <a href="index.html" class="top-nav__menu-link">Home</a>
+                    </li>
+                    <li class="top-nav__menu-item">
+                        <a href="battle.html" class="top-nav__menu-link">Batallas</a>
+                    </li>
+                    <li class="top-nav__menu-item">
+                        <a href="ranking.html" class="top-nav__menu-link">Leaderboard</a>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="top-nav__right">
                 <button class="top-nav__theme-btn" title="Cambiar tema">
@@ -357,7 +320,8 @@
                         <img src="img/facilexam.jpg" alt="Meme universitario" class="meme-card__image">
                         <div class="meme-card__content">
                             <h3 class="meme-card__title">Cuando el profesor dice "examen fácil"</h3>
-                            <p class="meme-card__context">Cuando el profesor dice "examen fácil, Todos sabemos que es una trampa...</p>
+                            <p class="meme-card__context">Cuando el profesor dice "examen fácil, Todos sabemos que es
+                                una trampa...</p>
                             <div class="meme-card__battle-stats">
                                 <div class="meme-card__stat meme-card__stat--new">
                                     <i data-lucide="trophy" class="meme-card__stat-icon meme-card__stat-icon--new"></i>

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeArena - Batallas de Memes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Iconos de Lucide para tener iconos bonitos -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body class="page-layout">
+
+    <!-- BARRA LATERAL IZQUIERDA -->
+    <aside data-component="Sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <div class="sidebar__logo">
+                <span class="sidebar__logo-icon">🥊</span>
+                <h1 class="sidebar__logo-text">MemeArena</h1>
+            </div>
+        </div>
+
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__menu-item">
+                    <a href="user.html" class="sidebar__link sidebar__link--active">
+                        <i data-lucide="home" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Mis Memes</span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="perfil.html" class="sidebar__link">
+                        <i data-lucide="zap" class="sidebar__icon"></i>
+                        <span class="sidebar__text">Perfil</span>
+                    </a>
+                </li>
+
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar__footer">
+            <a href="login.html" class="sidebar__login-btn">
+                <i data-lucide="log-out" class="sidebar__icon"></i>
+                <span class="sidebar__text">Salir</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-layout-user">
+
+        <!-- NAVEGACIÓN SUPERIOR -->
+        <header data-component="TopNav" class="top-nav">
+            <div class="top-nav__left">
+                <div class="top-nav__logo">
+                    <span class="top-nav__logo-icon">🥊</span>
+                    <span class="top-nav__logo-text">MemeArena</span>
+                </div>
+            </div>
+
+            <!-- NAVEGACIÓN PRINCIPAL 
+             ESTO NO SE SI DEJARLO EN LA VISTA DE USUARIO LOGUEADO-->
+            <nav class="top-nav__navigation" aria-label="Main">
+                <ul class="top-nav__menu">
+                    <li class="top-nav__menu-item">
+                        <a href="index.html" class="top-nav__menu-link">Home</a>
+                    </li>
+                    <li class="top-nav__menu-item">
+                        <a href="battle.html" class="top-nav__menu-link">Batallas</a>
+                    </li>
+                    <li class="top-nav__menu-item">
+                        <a href="ranking.html" class="top-nav__menu-link">Leaderboard</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="top-nav__right">
+                <button class="top-nav__theme-btn" title="Cambiar tema">
+                    <i data-lucide="moon" class="top-nav__icon"></i>
+                </button>
+                <button class="top-nav__notifications-btn" title="Notificaciones">
+                    <i data-lucide="bell" class="top-nav__icon"></i>
+                </button>
+                <a href="index.html" class="top-nav__login-btn">
+                    <i data-lucide="log-out" class="top-nav__icon"></i>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- CONTENIDO CENTRAL -->
+        <main data-outlet class="main-content">
+
+                       <!-- HEADER DE PÁGINA -->
+            <div class="page-header">
+                <h1 class="page-title">Mi Perfil</h1>
+                <a href="#edit-profile" class="btn-primary">
+                    <i data-lucide="edit" class="btn-icon"></i>
+                    Editar Perfil
+                </a>
+            </div>
+
+            <!-- PERFIL DE USUARIO -->
+            <div class="profile-container">
+                
+                <!-- INFORMACIÓN PRINCIPAL -->
+                <div class="profile-main">
+                    <div class="profile-avatar-section">
+                        <img src="https://picsum.photos/150" alt="Avatar del usuario" class="profile-avatar">
+                        <div class="profile-basic-info">
+                            <h2 class="profile-nickname">@memeLord123</h2>
+                            <p class="profile-email">usuario@example.com</p>
+                            <p class="profile-date">Miembro desde: 15 de Marzo, 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-bio-section">
+                        <h3 class="profile-bio-title">Biografía</h3>
+                        <p class="profile-bio">
+                            ¡Hola! Soy un creador apasionado de memes épicos. Me encanta hacer reír a la gente con contenido original y divertido. Especializado en memes de programación y cultura geek. ¡Que gane el mejor meme! 🚀
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ESTADÍSTICAS -->
+                <div class="profile-stats">
+                    <h3 class="stats-title">Estadísticas</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i data-lucide="image" class="stat-icon-img"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">24</span>
+                                <span class="stat-label">Memes Creados</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i data-lucide="trophy" class="stat-icon-img"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">18</span>
+                                <span class="stat-label">Victorias</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i data-lucide="x-circle" class="stat-icon-img"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Derrotas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i data-lucide="zap" class="stat-icon-img"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">75%</span>
+                                <span class="stat-label">Tasa de Victoria</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HISTORIAL RECIENTE -->
+                <div class="profile-history">
+                    <h3 class="history-title">Actividad Reciente</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon victory">
+                                <i data-lucide="trophy"></i>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Victoria en batalla contra "Meme Clásico"</span>
+                                <span class="activity-date">Hace 2 horas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon upload">
+                                <i data-lucide="upload"></i>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Nuevo meme publicado: "Cuando funciona a la primera"</span>
+                                <span class="activity-date">Hace 1 día</span>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon defeat">
+                                <i data-lucide="x-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <span class="activity-text">Derrota contra "Meme Viral"</span>
+                                <span class="activity-date">Hace 3 días</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL PARA EDITAR PERFIL -->
+            <div id="edit-profile" class="modal">
+                <div class="modal-backdrop"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Editar Perfil</h2>
+                        <a href="#" class="modal-close">
+                            <i data-lucide="x"></i>
+                        </a>
+                    </div>
+
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="editNickname" class="form-label">Nickname</label>
+                            <input type="text" id="editNickname" name="nickname" class="form-input"
+                                value="memeLord123" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" id="editEmail" name="email" class="form-input"
+                                value="usuario@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editAvatar" class="form-label">Avatar</label>
+                            <div class="image-upload-area">
+                                <input type="file" id="editAvatar" name="avatar" class="form-input-file" accept="image/*">
+                                <div class="image-preview">
+                                    <img src="https://via.placeholder.com/150x150" alt="Avatar actual" class="current-image">
+                                    <span class="upload-text">Haz clic para cambiar avatar</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editBio" class="form-label">Biografía</label>
+                            <textarea id="editBio" name="bio" class="form-textarea" rows="4" required>¡Hola! Soy un creador apasionado de memes épicos. Me encanta hacer reír a la gente con contenido original y divertido. Especializado en memes de programación y cultura geek. ¡Que gane el mejor meme! 🚀</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editPassword" class="form-label">Nueva Contraseña (opcional)</label>
+                            <input type="password" id="editPassword" name="password" class="form-input"
+                                placeholder="Dejar en blanco para mantener actual">
+                        </div>
+
+                        <div class="modal-actions">
+                            <a href="#" class="btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn-primary">
+                                <i data-lucide="save" class="btn-icon"></i>
+                                Guardar Cambios
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer data-component="Footer" class="footer-user">
+        <div class="footer__container">
+            <!-- SECCIÓN 1: LOGO -->
+            <div data-component="FooterSection" class="footer__section">
+                <div class="footer__logo">
+                    <span class="footer__logo-icon">🥊</span>
+                    <h3 class="footer__logo-text">MemeArena</h3>
+                </div>
+                <p class="footer__description">
+                    La plataforma donde los mejores memes luchan por la gloria.
+                    ¡Únete y demuestra quién crea el contenido más épico!
+                </p>
+            </div>
+
+            <!-- SECCIÓN 2: REDES SOCIALES -->
+            <div data-component="FooterSection" class="footer__section">
+                <h4 class="footer__section-title">Síguenos</h4>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="twitter" class="footer__social-icon"></i>
+                        Twitter
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="instagram" class="footer__social-icon"></i>
+                        Instagram
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="discord" class="footer__social-icon"></i>
+                        Discord
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i data-lucide="youtube" class="footer__social-icon"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: SPONSORS -->
+            <div data-component="FooterSection" class="footer__section">
+                <h4 class="footer__section-title">Patrocinadores</h4>
+                <div class="footer__sponsors">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 1" class="footer__sponsor-logo">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 2" class="footer__sponsor-logo">
+                    <img src="https://via.placeholder.com/100x40" alt="Sponsor 3" class="footer__sponsor-logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copyright">© 2025 MemeArena. - juanko6</p>
+        </div>
+    </footer>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

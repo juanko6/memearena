@@ -1,0 +1,1197 @@
+/* ESTILOS PARA PANEL ADMINISTRATIVO */
+
+/* Sidebar Admin */
+.sidebar-admin {
+    background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+}
+
+.sidebar__admin-badge {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Indicador de Admin en top nav */
+.admin-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.admin-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Page Header Admin */
+.page-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.page-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.page-header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Filtros y búsqueda */
+.admin-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-search {
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #9ca3af;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filter-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Estadísticas Admin */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card-admin {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card-admin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon-admin {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon-admin.users {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stat-icon-admin.active {
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    color: white;
+}
+
+.stat-icon-admin.new {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.stat-icon-admin.banned {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+.stat-icon-admin.battles-total {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.stat-icon-admin.battles-active {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+}
+
+.stat-icon-admin.battles-votes {
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    color: white;
+}
+
+.stat-icon-admin.battles-avg {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.stat-content-admin {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number-admin {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1;
+}
+
+.stat-label-admin {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+/* Tabla Admin */
+.admin-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.admin-table {
+    width: 100%;
+}
+
+.table-header-admin {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 100px 120px 80px 150px;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: #374151;
+    align-items: center;
+}
+
+.table-row-admin {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 100px 120px 80px 150px;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s;
+    align-items: center;
+}
+
+.table-row-admin:hover {
+    background: #f9fafb;
+}
+
+.table-cell-admin {
+    display: flex;
+    align-items: center;
+}
+
+.table-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Información de usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 0.875rem;
+}
+
+.user-id {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.user-email {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-active {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.status-inactive {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-banned {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+.status-finished {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.date-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.meme-count {
+    font-weight: 600;
+    color: #1f2937;
+    background: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+/* Tabla de batallas específica */
+.battles-admin-table {
+    width: 100%;
+}
+
+.battles-table-header-admin {
+    display: grid;
+    grid-template-columns: 50px 140px 280px 150px 100px 120px 200px;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: #374151;
+    align-items: center;
+}
+
+.battles-table-row-admin {
+    display: grid;
+    grid-template-columns: 50px 140px 280px 150px 100px 120px 200px;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s;
+    align-items: center;
+}
+
+.battles-table-row-admin:hover {
+    background: #f9fafb;
+}
+
+.battles-table-cell-admin {
+    display: flex;
+    align-items: center;
+}
+
+/* Información de batalla */
+.battle-info-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.battle-id-admin {
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 0.875rem;
+}
+
+.battle-category-admin {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Participantes en una sola columna */
+.participants-admin {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.participant-admin {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+}
+
+.participant-image-admin {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+.participant-name-admin {
+    font-size: 0.75rem;
+    color: #1f2937;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80px;
+}
+
+.vs-small-admin {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 0.75rem;
+    background: #f3f4f6;
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* Resumen de votos compacto */
+.votes-summary-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 120px;
+}
+
+.total-votes-admin {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.votes-bar-admin {
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.votes-bar-fill-admin {
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.3s ease;
+}
+
+.votes-split-admin {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Información de tiempo */
+.time-info-admin {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.time-icon-admin {
+    width: 16px;
+    height: 16px;
+    color: #6b7280;
+}
+
+.time-text-admin {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Botones de acción */
+.action-buttons-admin {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.action-buttons-admin-priority {
+    display: flex;
+    gap: 0.375rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 180px;
+}
+
+.btn-action-admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-buttons-admin-priority .btn-action-admin {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.btn-view {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.btn-view:hover {
+    background: #bfdbfe;
+}
+
+.btn-edit {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.btn-edit:hover {
+    background: #fde68a;
+}
+
+.btn-ban, .btn-delete {
+    background: #fecaca;
+    color: #dc2626;
+}
+
+.btn-ban:hover, .btn-delete:hover {
+    background: #fca5a5;
+}
+
+.btn-activate, .btn-unban, .btn-start {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.btn-activate:hover, .btn-unban:hover, .btn-start:hover {
+    background: #a7f3d0;
+}
+
+.btn-pause {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.btn-pause:hover {
+    background: #fde68a;
+}
+
+.btn-results {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.btn-results:hover {
+    background: #c7d2fe;
+}
+
+.btn-archive {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.btn-archive:hover {
+    background: #e5e7eb;
+}
+
+/* Asegurar visibilidad de iconos */
+.action-buttons-admin-priority .btn-action-admin i,
+.action-buttons-admin .btn-action-admin i {
+    width: 16px;
+    height: 16px;
+}
+
+/* Paginación */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-info {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pagination-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #f3f4f6;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-numbers {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0 1rem;
+}
+
+.pagination-number {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-number:hover {
+    background: #f3f4f6;
+}
+
+.pagination-number.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.pagination-dots {
+    color: #9ca3af;
+    padding: 0 0.5rem;
+}
+
+/* MODAL CSS */
+
+/* Modal base - CSS ONLY usando :target */
+.modalb {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    
+    /* Oculto por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* CLAVE: Mostrar modal cuando es target */
+.modalb:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalb-backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.modalb-content {
+position: relative;
+    background-color: white;
+    margin: 2% auto; /* Reducir margen superior */
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+    max-height: 95vh; /* AGREGAR ALTURA MÁXIMA */
+    overflow: hidden; /* AGREGAR PARA CONTROLAR DESBORDAMIENTO */
+}
+
+.modalb:target .modal-content {
+    transform: translateY(0);
+}
+
+.modalb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modalb-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.modalb-close {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #6b7280;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.modalb-close:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.modalb-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* MODAL DE CREAR BATALLA */
+
+.modalb-large {
+    max-width: 900px;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.battle-form {
+    padding: 0;
+    display: block; /* FORZAR DISPLAY */
+    width: 100%;
+}
+
+/* Secciones del formulario */
+.form-section {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: block; /* FORZAR DISPLAY */
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-section-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+/* Filas del formulario */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Form elements */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.875rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Selects */
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Contenedor de selección de memes */
+.meme-selection-container {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.meme-selection-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.meme-selection-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.btn-small {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* Vista previa de meme */
+.meme-preview {
+    margin-top: 1rem;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.meme-preview-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #9ca3af;
+}
+
+.preview-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+.meme-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Botones */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background: #e5e7eb;
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+    .battles-table-header-admin,
+    .battles-table-row-admin {
+        grid-template-columns: 50px 120px 200px 120px 90px 100px 160px;
+        gap: 0.75rem;
+    }
+    
+    .participant-name-admin {
+        max-width: 60px;
+    }
+    
+    .action-buttons-admin-priority {
+        min-width: 140px;
+        gap: 0.25rem;
+    }
+    
+    .action-buttons-admin-priority .btn-action-admin {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .admin-filters {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .filter-controls {
+        justify-content: stretch;
+    }
+    
+    .filter-select {
+        flex: 1;
+    }
+    
+    .battles-table-header-admin,
+    .battles-table-row-admin {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .battles-table-header-admin {
+        display: none;
+    }
+    
+    .battles-table-row-admin {
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .battles-table-cell-admin {
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f3f4f6;
+    }
+    
+    .battles-table-cell-admin:last-child {
+        border-bottom: none;
+        justify-content: center;
+    }
+    
+    .participants-admin {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .participant-admin {
+        justify-content: flex-start;
+    }
+    
+    .participant-name-admin {
+        max-width: none;
+    }
+    
+    .action-buttons-admin-priority {
+        justify-content: center;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .participants-admin {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .action-buttons-admin-priority {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .action-buttons-admin-priority .btn-action-admin {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .pagination-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .pagination-numbers {
+        margin: 0;
+    }
+    
+    .admin-indicator .admin-text {
+        display: none;
+    }
+    
+    .modal-large {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .meme-selection-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .action-buttons-admin {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+}
+
+/* Mejoras adicionales para la tabla */
+.battles-table-cell-admin:first-child {
+    justify-content: center;
+}
+
+.battle-info-admin {
+    min-width: 100px;
+}
+
+.time-info-admin {
+    min-width: 100px;
+}
+
+.status-badge {
+    min-width: 80px;
+    text-align: center;
+}

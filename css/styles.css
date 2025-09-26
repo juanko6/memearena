@@ -3,6 +3,10 @@
 @import url('layout.css');
 @import url('components.css');
 @import url('battles.css');
-@import url('leaderboards.css');
+@import url('ranking.css');
 @import url('responsive.css');
 @import url('login.css');
+@import url('user.css');
+@import url('perfil.css');
+@import url('admin.css');
+@import url('adminbattles.css');

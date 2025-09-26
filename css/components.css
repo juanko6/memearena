@@ -364,6 +364,13 @@
 .footer {
     background: var(--primary-color);
     color: var(--gray-300);
+    
+    margin-top: 2rem;
+}
+
+.footer-user {
+    background: var(--primary-color);
+    color: var(--gray-300);
     margin-left: var(--sidebar-width);
     margin-top: 2rem;
 }

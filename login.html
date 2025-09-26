@@ -19,10 +19,10 @@
                 <input type="radio" id="show-signin" name="form-toggle" checked>
                 <input type="radio" id="show-register" name="form-toggle">
 
-                <!-- Sign In Form -->
-                <div class="form-section signin-form">
+                <!-- Sign In Form *****QUITAR LUEGO EL ONCLICK**** -->
+                <div class="form-section signin-form"> 
                     <h2>Iniciar Sesión</h2>
-                    <form action="/login" method="POST">
+                    <form action="#" method="POST">
                         <div class="input-group">
                             <label for="username">Usuario</label>
                             <input type="text" id="username" name="username" required>
@@ -33,7 +33,10 @@
                             <input type="password" id="password" name="password" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                        <button type="submit" class="btn btn-primary"  onclick="location.href='user.html'" style="cursor: pointer;">Iniciar Sesión</button>
+                    <br> </br>
+                        <button type="submit" class="btn btn-primary"  onclick="location.href='admin.html'" style="cursor: pointer;">Iniciar Sesión Admin</button>
+
                     </form>
 
                     <p class="switch-form">
@@ -42,7 +45,7 @@
                     </p>
                 </div>
 
-                <!-- Register Form -->
+                <!-- Register Form *****QUITAR LUEGO EL ONCLICK**** -->
                 <div class="form-section register-form">
                     <h2>Crear Cuenta</h2>
                     <form action="/register" method="POST">
@@ -56,7 +59,7 @@
                             <input type="password" id="reg-password" name="password" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+                        <button type="submit" class="btn btn-primary" onclick="location.href='user.html'" style="cursor: pointer;">Crear Cuenta</button>
                     </form>
 
                     <p class="switch-form">

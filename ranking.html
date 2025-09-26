@@ -12,58 +12,6 @@
 
 <body class="page-layout">
 
-    <!-- BARRA LATERAL IZQUIERDA -->
-    <aside data-component="Sidebar" class="sidebar">
-        <div class="sidebar__header">
-            <div class="sidebar__logo">
-                <span class="sidebar__logo-icon">🥊</span>
-                <h1 class="sidebar__logo-text">MemeArena</h1>
-            </div>
-        </div>
-
-        <nav class="sidebar__nav">
-            <ul class="sidebar__menu">
-                <li class="sidebar__menu-item">
-                    <a href="index.html" class="sidebar__link sidebar__link--active">
-                        <i data-lucide="home" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Inicio</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="battle.html" class="sidebar__link">
-                        <i data-lucide="zap" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Batallas</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="ranking.html" class="sidebar__link">
-                        <i data-lucide="trophy" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Tabla de Líderes</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="#busqueda" class="sidebar__link">
-                        <i data-lucide="search" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Búsqueda</span>
-                    </a>
-                </li>
-                <li class="sidebar__menu-item">
-                    <a href="#mis-memes" class="sidebar__link">
-                        <i data-lucide="image" class="sidebar__icon"></i>
-                        <span class="sidebar__text">Mis Memes</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="sidebar__footer">
-            <a href="login.html" class="sidebar__login-btn">
-                <i data-lucide="log-in" class="sidebar__icon"></i>
-                <span class="sidebar__text">Iniciar Sesión</span>
-            </a>
-        </div>
-    </aside>
-
     <!-- CONTENIDO PRINCIPAL -->
     <div class="main-layout">
 
@@ -75,6 +23,21 @@
                     <span class="top-nav__logo-text">MemeArena</span>
                 </div>
             </div>
+
+            <!-- NAVEGACIÓN PRINCIPAL -->
+            <nav class="top-nav__navigation" aria-label="Main">
+                <ul class="top-nav__menu">
+                    <li class="top-nav__menu-item">
+                        <a href="index.html" class="top-nav__menu-link">Home</a>
+                    </li>
+                    <li class="top-nav__menu-item">
+                        <a href="battle.html" class="top-nav__menu-link">Batallas</a>
+                    </li>
+                    <li class="top-nav__menu-item">
+                        <a href="ranking.html" class="top-nav__menu-link">Leaderboard</a>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="top-nav__right">
                 <button class="top-nav__theme-btn" title="Cambiar tema">
@@ -100,26 +63,32 @@
                     <p class="hero__subtitle">Los memes más exitosos de la arena</p>
                 </div>
 
-                <div class="leaderboards__filters">
-                    <div data-component="LeaderboardFilters" class="leaderboard-filters">
-                        <button class="leaderboard-filters__btn leaderboard-filters__btn--active">
-                            <i data-lucide="filter" class="leaderboard-filters__icon"></i>
-                            Filtros
-                        </button>
-                        <select class="leaderboard-filters__select">
-                            <option value="global">🌍 Global</option>
-                            <option value="humor">😂 Humor</option>
-                            <option value="programacion">💻 Programación</option>
-                            <option value="universidad">🎓 Universidad</option>
-                        </select>
-                        <div class="leaderboard-filters__search">
-                            <input type="text" placeholder="Buscar usuario" class="leaderboard-filters__input">
-                            <button class="leaderboard-filters__search-btn">
-                                <i data-lucide="search" class="leaderboard-filters__search-icon"></i>
-                            </button>
+                <!-- BARRA DE BÚSQUEDA -->
+                <section data-component="SearchBar" class="search-section">
+                    <div class="search-bar">
+                        <div class="search-bar__input-group">
+                            <i data-lucide="search" class="search-bar__icon"></i>
+                            <input type="text" class="search-bar__input"
+                                placeholder="Buscar memes por título, categoría, usuario...">
+                            <button class="search-bar__btn">Buscar</button>
+                        </div>
+                        <div class="search-bar__filters">
+                            <select class="search-bar__filter">
+                                <option>Todas las categorías</option>
+                                <option>😂 Humor</option>
+                                <option>🎓 Universidad</option>
+                                <option>💻 Programación</option>
+                                <option>⚽ Deportes</option>
+                            </select>
+                            <select class="search-bar__filter">
+                                <option>Todos los tiempos</option>
+                                <option>Hoy</option>
+                                <option>Esta semana</option>
+                                <option>Este mes</option>
+                            </select>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <!-- TOP 5 DESTACADOS -->
                 <div data-component="TopMemes" class="top-memes">
