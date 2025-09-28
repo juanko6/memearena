@@ -1,5 +1,7 @@
 # Aplicación web: MemeArena
 
+- [link al Repositorio publico en GITHUB](https://github.com/juanko6/memearena/)
+
 ## Descripción general:
 
 MemeArena es una plataforma donde los usuarios registrados pueden subir memes (imágenes o frases cortas) y participar en duelos 1 vs 1 generados automáticamente por el sistema. el sistema empareja memes de categorias similares o tematicas relacionadas para crear batallas cada cierto tiempo Los usuarios votan por el meme que consideran mejor en cada batalla, y los memes ganadores suman puntos para el ranking. La aplicación permite gestionar perfiles de usuario, memes, votaciones y rankings, con una interfaz gamificada estilo torneo.
