@@ -44,7 +44,7 @@ MemeArena es una plataforma donde los usuarios registrados pueden subir memes (i
 ---
 
 ## Parte 2: Modelo de datos (entidades principales)
-
+```mermaid
 erDiagram
     USUARIOS {
         string id_user
